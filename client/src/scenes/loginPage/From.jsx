@@ -75,7 +75,7 @@ const Form = () => {
     }
 
     try {
-      const savedUserResponse = await fetch("http://localhost:3001/auth/register", {
+      const savedUserResponse = await fetch("https://social-media-backend-oxs0.onrender.com/auth/register", {
         method: "POST",
         body: formData,
       });
@@ -100,7 +100,7 @@ const Form = () => {
   /* LOGIN */
   const login = async (values, onSubmitProps) => {
     try {
-      const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+      const loggedInResponse = await fetch("https://social-media-backend-oxs0.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
